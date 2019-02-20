@@ -1,2 +1,2 @@
 # programs
-COde Examples
+Code Examples
