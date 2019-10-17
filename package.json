@@ -1,0 +1,19 @@
+{
+  "name": "programs",
+  "version": "1.0.0",
+  "description": "Code Examples",
+  "main": "index.js",
+  "scripts": {
+    "main": "tsc index.ts && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasinmalli/programs.git"
+  },
+  "author": "Yasin MALLI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasinmalli/programs/issues"
+  },
+  "homepage": "https://github.com/yasinmalli/programs#readme"
+}
