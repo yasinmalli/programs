@@ -1,4 +1,4 @@
-import { Node } from "./Classes";
+import { Node } from "./src/helpers/Classes";
 
 let node: Node<string> = new Node("test");
 
