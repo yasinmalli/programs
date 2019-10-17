@@ -4,7 +4,7 @@
   "description": "Code Examples",
   "main": "index.js",
   "scripts": {
-    "main": "tsc && node index.js"
+    "main": "tsc && node out/index.js"
   },
   "repository": {
     "type": "git",
