@@ -52,7 +52,33 @@ export class Node<T> {
     }
 
     removeDupsWithRunner(head: Node<T>): void {
-        // todo: fill this in
+        let current: Node<T> = head;
+        while(current != null) {
+            
+            let runner: Node<T> = current;
+            while(runner.next != null) {
+                if (runner.next.data == current.data) {
+                    runner.next = runner.next.next;
+                } else {
+                    runner = runner.next;
+                }
+            }
+            
+            current = current.next;
+        }
+    }
+
+    printKthElementToLast(head: Node<T>, k: number): number {
+        if (head == null) {
+            return 0;
+        }
+
+        let index: number = this.printKthElementToLast(head.next, k) + 1;
+        if (index == k) {
+            console.log(`kth element is: ${head.data}`);
+        }
+
+        return index;
     }
     
 }
@@ -71,7 +97,9 @@ node.appendToTail("test3");
 node.appendToTail("test4");
 
 let newNode: Node<string> = node.deleteNode(node, "test2");
-newNode.removeDups(newNode);
+// newNode.removeDups(newNode);
+newNode.removeDupsWithRunner(newNode);
+newNode.printKthElementToLast(newNode, 5);
 
 while(newNode != null) {
     console.log(newNode.data);
